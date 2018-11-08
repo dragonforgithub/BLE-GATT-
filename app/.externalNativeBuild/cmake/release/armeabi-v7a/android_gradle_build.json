@@ -1,0 +1,37 @@
+
+{
+	"buildFiles" : [ "E:/project/androidStudio/NanoGattDemo/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\project\\androidStudio\\NanoGattDemo\\app\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target clean"
+	],
+	"libraries" : 
+	{
+		"RemoteServiceJNI-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "RemoteServiceJNI",
+			"buildCommand" : "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\project\\androidStudio\\NanoGattDemo\\app\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target RemoteServiceJNI",
+			"buildType" : "release",
+			"output" : "E:/project/androidStudio/NanoGattDemo/app/src/main/jniLibs/armeabi-v7a/libRemoteServiceJNI.so",
+			"toolchain" : "358830773"
+		},
+		"nano_socket-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "nano_socket",
+			"buildCommand" : "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\project\\androidStudio\\NanoGattDemo\\app\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target nano_socket",
+			"buildType" : "release",
+			"output" : "E:/project/androidStudio/NanoGattDemo/app/src/main/jniLibs/armeabi-v7a/libnano_socket.so",
+			"toolchain" : "358830773"
+		}
+	},
+	"toolchains" : 
+	{
+		"358830773" : 
+		{
+			"cCompilerExecutable" : "C:/Users/Administrator/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/Administrator/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

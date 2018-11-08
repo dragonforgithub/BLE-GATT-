@@ -1,0 +1,37 @@
+
+{
+	"buildFiles" : [ "E:/project/androidStudio/NanoGattDemo/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\project\\androidStudio\\NanoGattDemo\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target clean"
+	],
+	"libraries" : 
+	{
+		"RemoteServiceJNI-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "RemoteServiceJNI",
+			"buildCommand" : "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\project\\androidStudio\\NanoGattDemo\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target RemoteServiceJNI",
+			"buildType" : "debug",
+			"output" : "E:/project/androidStudio/NanoGattDemo/app/src/main/jniLibs/x86_64/libRemoteServiceJNI.so",
+			"toolchain" : "358830773"
+		},
+		"nano_socket-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "nano_socket",
+			"buildCommand" : "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\project\\androidStudio\\NanoGattDemo\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target nano_socket",
+			"buildType" : "debug",
+			"output" : "E:/project/androidStudio/NanoGattDemo/app/src/main/jniLibs/x86_64/libnano_socket.so",
+			"toolchain" : "358830773"
+		}
+	},
+	"toolchains" : 
+	{
+		"358830773" : 
+		{
+			"cCompilerExecutable" : "C:/Users/Administrator/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/Administrator/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}
