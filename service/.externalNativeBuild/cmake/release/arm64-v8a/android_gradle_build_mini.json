@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "E:\\project\\androidStudio\\NanoGattDemo\\service\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\project\\androidStudio\\NanoGattDemo\\service\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target clean"
+  ],
+  "libraries": {
+    "nanoGatt-Release-arm64-v8a": {
+      "artifactName": "nanoGatt",
+      "abi": "arm64-v8a",
+      "output": "E:\\project\\androidStudio\\NanoGattDemo\\service\\src\\main\\jniLibs\\libnanoGatt.so"
+    },
+    "nanogattJNI-Release-arm64-v8a": {
+      "artifactName": "nanogattJNI",
+      "buildCommand": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\project\\androidStudio\\NanoGattDemo\\service\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target nanogattJNI",
+      "abi": "arm64-v8a",
+      "output": "E:\\project\\androidStudio\\NanoGattDemo\\service\\src\\main\\jniLibs\\arm64-v8a\\libnanogattJNI.so"
+    }
+  }
+}

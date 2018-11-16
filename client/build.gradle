@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+println "In posdevice, gradle id is " +gradle.hashCode()
+
 android {
     compileSdkVersion 27
 

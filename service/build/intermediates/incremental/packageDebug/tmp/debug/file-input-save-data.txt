@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Fri Nov 16 23:00:02 CST 2018
+1.base=E\:\\project\\androidStudio\\NanoGattDemo\\service\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
+2.path=classes.dex
+0.baseType=DIRECTORY
+2.base=E\:\\project\\androidStudio\\NanoGattDemo\\service\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+2.set=DEX
+1.baseType=DIRECTORY
+count=3
+1.set=NATIVE_RESOURCE
+0.path=lib/armeabi-v7a/libnanogattJNI.so
+0.set=NATIVE_RESOURCE
+0.base=E\:\\project\\androidStudio\\NanoGattDemo\\service\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
+2.baseType=DIRECTORY
+1.path=lib/armeabi-v7a/libnanoGatt.so

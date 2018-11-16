@@ -1,4 +1,0 @@
-E:/project/androidStudio/NanoGattDemo/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/nano_socket.dir
-E:/project/androidStudio/NanoGattDemo/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/rebuild_cache.dir
-E:/project/androidStudio/NanoGattDemo/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/RemoteServiceJNI.dir
-E:/project/androidStudio/NanoGattDemo/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/edit_cache.dir

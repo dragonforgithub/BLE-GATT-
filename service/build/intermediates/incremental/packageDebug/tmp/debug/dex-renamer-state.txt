@@ -1,0 +1,4 @@
+#Fri Nov 16 23:00:01 CST 2018
+base.0=E\:\\project\\androidStudio\\NanoGattDemo\\service\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

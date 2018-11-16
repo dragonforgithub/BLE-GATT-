@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        //applicationId "com.android.NanoServer.NanoBluetoothLeService"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // 使用Cmake工具
+        externalNativeBuild {
+            cmake {
+                cppFlags "" //编译参数
+                abiFilters 'armeabi-v7a'//,'arm64-v8a','x86','x86_64' //支持版本
+            }
+        }
+    }
+
+    // 配置CMakeLists.txt路径
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    packagingOptions { //For Error: More than one file was found with OS independent path
+        pickFirst 'lib/armeabi-v7a/libnanogattJNI.so'
+    }
+}
+
+dependencies {
+    //implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation project(':aidl')
+}

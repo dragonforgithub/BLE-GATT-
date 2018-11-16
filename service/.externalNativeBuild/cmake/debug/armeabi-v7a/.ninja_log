@@ -1,0 +1,5 @@
+# ninja log v5
+0	523	0	CMakeFiles/nanogattJNI.dir/src/main/jni/nanoGatt_jni.c.o	400aeb6c92ef2823
+525	925	0	../../../../src/main/jniLibs/armeabi-v7a/libnanogattJNI.so	236f75af594fb996
+2	168	0	CMakeFiles/nanogattJNI.dir/src/main/jni/nanoGatt_jni.c.o	400aeb6c92ef2823
+2	190	0	../../../../src/main/jniLibs/armeabi-v7a/libnanogattJNI.so	c25e10152319635a
