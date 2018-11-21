@@ -177,8 +177,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=C:/Users/Administrator/AppData/Local/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-strip.exe
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:\Users\Administrator\AppData\Local\Android\Sdk\ndk-bundle\build\cmake\android.toolchain.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/Users/Administrator/AppData/Local/Android/Sdk/ndk-bundle/build/cmake/android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -193,7 +193,7 @@ Project_BINARY_DIR:STATIC=E:/project/androidStudio/NanoGattDemo/service/.externa
 Project_SOURCE_DIR:STATIC=E:/project/androidStudio/NanoGattDemo/service
 
 //Dependencies for the target
-nanogattJNI_LIB_DEPENDS:STATIC=general;nanoGatt;general;log;general;android;
+nanogattJNI_LIB_DEPENDS:STATIC=general;nanoHAL;general;log;general;android;
 
 
 ########################

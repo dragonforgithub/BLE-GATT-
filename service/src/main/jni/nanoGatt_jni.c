@@ -21,36 +21,36 @@
 #include <jb_nanogatt.h>
 
 
-#define TAG "NanoAppJni" // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½LOGï¿½Ä±ï¿½Ê¶  
-#define OS_PRINTF(...) __android_log_print(ANDROID_LOG_DEBUG,TAG ,__VA_ARGS__) // ï¿½ï¿½ï¿½ï¿½LOGDï¿½ï¿½ï¿½ï¿½   
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,TAG ,__VA_ARGS__) // ï¿½ï¿½ï¿½ï¿½LOGIï¿½ï¿½ï¿½ï¿½  
-#define LOGW(...) __android_log_print(ANDROID_LOG_WARN,TAG ,__VA_ARGS__) // ï¿½ï¿½ï¿½ï¿½LOGWï¿½ï¿½ï¿½ï¿½  
-#define OS_ERROR(...) __android_log_print(ANDROID_LOG_ERROR,TAG ,__VA_ARGS__) // ï¿½ï¿½ï¿½ï¿½LOGEï¿½ï¿½ï¿½ï¿½   
-#define LOGF(...) __android_log_print(ANDROID_LOG_FATAL,TAG ,__VA_ARGS__) // ï¿½ï¿½ï¿½ï¿½LOGFï¿½ï¿½ï¿½ï¿½ 
+#define TAG "NanoAppJni"
+#define OS_PRINTF(...) __android_log_print(ANDROID_LOG_DEBUG,TAG ,__VA_ARGS__)
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,TAG ,__VA_ARGS__)
+#define LOGW(...) __android_log_print(ANDROID_LOG_WARN,TAG ,__VA_ARGS__)
+#define OS_ERROR(...) __android_log_print(ANDROID_LOG_ERROR,TAG ,__VA_ARGS__)
+#define LOGF(...) __android_log_print(ANDROID_LOG_FATAL,TAG ,__VA_ARGS__)
 #define true  (1)
 #define false (0)
 /*
- Java ï¿½ï¿½ï¿½ï¿½	 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	 ï¿½ï¿½ï¿½ï¿½
- boolean jboolean	 C/C++8Î»ï¿½ï¿½ï¿½ï¿½
- byte	 jbyte	 C/C++ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½8Î»ï¿½ï¿½ï¿½ï¿½
- char	 jchar	 C/C++ï¿½Þ·ï¿½ï¿½Åµï¿½16Î»ï¿½ï¿½ï¿½ï¿½
- short	 jshort  C/C++ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½16Î»ï¿½ï¿½ï¿½ï¿½
- int jint	 C/C++ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½32Î»ï¿½ï¿½ï¿½ï¿½
- long	 jlong	 C/C++ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½64Î»ï¿½ï¿½ï¿½ï¿½e
- float	 jfloat  C/C++32Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- double     jdouble C/C++64Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- Object     jobject ï¿½Îºï¿½Javaï¿½ï¿½ï¿½ó£¬»ï¿½ï¿½ï¿½Ã»ï¿½Ð¶ï¿½Ó¦javaï¿½ï¿½ï¿½ÍµÄ¶ï¿½ï¿½ï¿½
- Class	 jclass  Classï¿½ï¿½ï¿½ï¿½
- String     jstring ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- Object[]	 jobjectArray	 ï¿½ÎºÎ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- boolean[]	 jbooleanArray	 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- byte[]  jbyteArray  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- char[]  jcharArray  ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- short[] jshortArray ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- int[]	 jintArray	 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- long[]  jlongArray  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- float[] jfloatArray ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- double[]	 jdoubleArray	 Ë«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ Java
+ boolean jboolean
+ byte	 jbyte
+ char	 jchar
+ short	 jshort
+ int    jint
+ long	 jlong
+ float	 jfloat
+ double     jdouble
+ Object     jobject
+ Class	 jclass
+ String     jstring
+ Object[]	 jobjectArray
+ boolean[]	 jbooleanArray
+ byte[]  jbyteArray
+ char[]  jcharArray
+ short[] jshortArray
+ int[]	 jintArray
+ long[]  jlongArray
+ float[] jfloatArray
+ double[]	 jdoubleArray
  */
 static JavaVM * gJavaVM=NULL;
 static jobject  gJavaObj;
@@ -69,7 +69,7 @@ static int OnWriteCommand_CallBack(char* pBuf,int size)
 
 	status=(*gJavaVM)->GetEnv(gJavaVM, (void **)&env, 0);
 	if(status != JNI_OK){
-		//Attachï¿½ï¿½ï¿½ß³ï¿½
+        //AttachCurrentThreadº¯Êý·µ»ØÒ»¸öÊôÓÚµ±Ç°±»¸½¼Óµ½JVMÉÏÏß³ÌµÄJNIEnvÖ¸Õë
 		if((*gJavaVM)->AttachCurrentThread(gJavaVM, &env, NULL) != JNI_OK)
 		{
 			OS_ERROR("%s: AttachCurrentThread() failed\n", __FUNCTION__);
@@ -77,7 +77,6 @@ static int OnWriteCommand_CallBack(char* pBuf,int size)
 		}
 	}
 
-	//ï¿½Òµï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
 	jniCallbackClass = (*env)->GetObjectClass(env,gJavaObj);
 	if(jniCallbackClass == NULL){
 		OS_ERROR("FindClass() Error.....\n");
@@ -97,7 +96,7 @@ static int OnWriteCommand_CallBack(char* pBuf,int size)
 	(*env)->DeleteLocalRef(env,data);
 
 	if(status != JNI_OK){
-		//Detachï¿½ß³ï¿½
+        /*µ÷ÓÃDetachCurrentThreadÀ´½â³ýÓëJVMµÄÁ´½Ó*/
 		if((*gJavaVM)->DetachCurrentThread(gJavaVM) != JNI_OK)
 		{
 			OS_ERROR("%s: DetachCurrentThread() failed\n", __FUNCTION__);
@@ -117,7 +116,7 @@ static int OnWriteRequest_CallBack(char* pBuf,int size)
 	
 	status=(*gJavaVM)->GetEnv(gJavaVM, (void**)&env, 0);
 	if(status != JNI_OK){
-		//Attachï¿½ï¿½ï¿½ß³ï¿½
+		//AttachCurrentThreadº¯Êý·µ»ØÒ»¸öÊôÓÚµ±Ç°±»¸½¼Óµ½JVMÉÏÏß³ÌµÄJNIEnvÖ¸Õë
 		if((*gJavaVM)->AttachCurrentThread(gJavaVM, &env, NULL) != JNI_OK)
 		{
 			OS_ERROR("%s: AttachCurrentThread() failed\n", __FUNCTION__);
@@ -125,7 +124,6 @@ static int OnWriteRequest_CallBack(char* pBuf,int size)
 		}
 	}
 
-	//ï¿½Òµï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
 	jniCallbackClass = (*env)->GetObjectClass(env,gJavaObj);
 	if(jniCallbackClass == NULL){
 		OS_ERROR("FindClass() Error.....\n");
@@ -145,7 +143,7 @@ static int OnWriteRequest_CallBack(char* pBuf,int size)
 	(*env)->DeleteLocalRef(env,data);
 
 	if(status != JNI_OK){
-		//Detachï¿½ß³ï¿½
+        /*µ÷ÓÃDetachCurrentThreadÀ´½â³ýÓëJVMµÄÁ´½Ó*/
 		if((*gJavaVM)->DetachCurrentThread(gJavaVM) != JNI_OK)
 		{
 			OS_ERROR("%s: DetachCurrentThread() failed\n", __FUNCTION__);
@@ -165,7 +163,7 @@ static void OnDataReceived_CallBack(char* pBuf,int size)
 	status=(*gJavaVM)->GetEnv(gJavaVM, (void**)&env, 0);
 	if(status != JNI_OK)
 	{
-		//Attachï¿½ï¿½ï¿½ß³ï¿½
+        /*µ÷ÓÃAttachCurrentThread½«µ±Ç°Ïß³ÌÓëJVM½øÐÐ¹ØÁª*/
 		if((*gJavaVM)->AttachCurrentThread(gJavaVM, &env, NULL) != JNI_OK)
 		{
 			OS_ERROR("%s: AttachCurrentThread() failed\n", __FUNCTION__);
@@ -173,7 +171,6 @@ static void OnDataReceived_CallBack(char* pBuf,int size)
 		}
 	}
 
-	//ï¿½Òµï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
 	jniCallbackClass = (*env)->GetObjectClass(env,gJavaObj);
 	if(jniCallbackClass == NULL)
 	{
@@ -187,7 +184,6 @@ static void OnDataReceived_CallBack(char* pBuf,int size)
 		return;
 	}
 
-
 	jbyteArray data = (*env)->NewByteArray(env, size);
 	(*env)->SetByteArrayRegion(env, data, 0, size, (jbyte *)pBuf);
 	(*env)->CallVoidMethod(env,gJavaObj,OnDataReceivedCb,data,size);
@@ -195,7 +191,7 @@ static void OnDataReceived_CallBack(char* pBuf,int size)
 
 	if(status != JNI_OK)
 	{
-		//Detachï¿½ß³ï¿½
+        /*µ÷ÓÃDetachCurrentThreadÀ´½â³ýÓëJVMµÄÁ´½Ó*/
 		if((*gJavaVM)->DetachCurrentThread(gJavaVM) != JNI_OK)
 		{
 			OS_ERROR("%s: DetachCurrentThread() failed\n", __FUNCTION__);
@@ -214,7 +210,7 @@ static void OnVoiceKeyAction_CallBack(int action)
 	status=(*gJavaVM)->GetEnv(gJavaVM, (void **)&env, 0);
 	if(status != JNI_OK)
 	{
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½,Æ©ï¿½ï¿½soï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½Í»á·µï¿½ï¿½< 0
+	    /*µ÷ÓÃAttachCurrentThread½«µ±Ç°Ïß³ÌÓëJVM½øÐÐ¹ØÁª*/
 		if((*gJavaVM)->AttachCurrentThread(gJavaVM, &env, NULL) != JNI_OK)
 		{
 			OS_ERROR("%s: AttachCurrentThread() failed\n", __FUNCTION__);
@@ -222,7 +218,6 @@ static void OnVoiceKeyAction_CallBack(int action)
 		}
 	}
 
-	//ï¿½Òµï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
 	jniCallbackClass = (*env)->GetObjectClass(env,gJavaObj);
 	if(jniCallbackClass == NULL)
 	{
@@ -240,7 +235,7 @@ static void OnVoiceKeyAction_CallBack(int action)
 
 	if(status != JNI_OK)
 	{
-		//Detachï¿½ß³ï¿½
+	    /*µ÷ÓÃDetachCurrentThreadÀ´½â³ýÓëJVMµÄÁ´½Ó*/
 		if((*gJavaVM)->DetachCurrentThread(gJavaVM) != JNI_OK)
 		{
 			OS_ERROR("%s: DetachCurrentThread() failed\n", __FUNCTION__);
@@ -256,7 +251,7 @@ Java_com_android_NanoServer_NanoBluetoothLeService_NanoOpen( JNIEnv* env,jobject
 	if(!init)
 	{
 		init = 1;
-		/*ï¿½ï¿½È¡È«ï¿½ï¿½ï¿½ï¿½JavaVM Ö¸ï¿½ï¿½*/
+		/* Í¨¹ýJNIEnvÎÒÃÇ¿ÉÒÔ»ñÈ¡Ò»¸öJavaÐéÄâ»ú¶ÔÏó */
 		(*env)->GetJavaVM(env,&gJavaVM);
 		gJavaObj = (*env)->NewGlobalRef(env, obj);
 		OS_PRINTF("JNI Version Build In Time %s-%s\n",__DATE__,__TIME__);
@@ -265,7 +260,7 @@ Java_com_android_NanoServer_NanoBluetoothLeService_NanoOpen( JNIEnv* env,jobject
 		OS_TaskCreate(NULL,Nano_PthreadLoop,NULL);*/
 		nano_RegisterWriteCmdCb((WriteCb)OnWriteCommand_CallBack);
 		nano_RegisterWriteReqCb((WriteCb)OnWriteRequest_CallBack);
-#if 0
+#if 1
 		nano_RegisterDataReceivedCb(OnDataReceived_CallBack);
 		nano_RegisterVoiceKeyCb(OnVoiceKeyAction_CallBack);
 		OS_PRINTF("NanoOpen Success\n");
@@ -287,7 +282,8 @@ Java_com_android_NanoServer_NanoBluetoothLeService_NanoProcData(JNIEnv *env, job
 	}
 	
 	if ((*env)->ExceptionCheck(env)) return;
-	
+
+    OS_PRINTF("nano_appProcData size = %d\n",size);
 	nano_appProcData(buf,size);
 	
 	if(buf)

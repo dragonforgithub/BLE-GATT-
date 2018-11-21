@@ -8,12 +8,12 @@
 	],
 	"libraries" : 
 	{
-		"nanoGatt-Release-armeabi-v7a" : 
+		"nanoHAL-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
-			"artifactName" : "nanoGatt",
+			"artifactName" : "nanoHAL",
 			"buildType" : "release",
-			"output" : "E:/project/androidStudio/NanoGattDemo/service/src/main/jniLibs/armeabi-v7a/libnanoGatt.so",
+			"output" : "E:/project/androidStudio/NanoGattDemo/service/src/main/jniLibs/armeabi-v7a/libnanoHAL.so",
 			"toolchain" : "358830773"
 		},
 		"nanogattJNI-Release-armeabi-v7a" : 

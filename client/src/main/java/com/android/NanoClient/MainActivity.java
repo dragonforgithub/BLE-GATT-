@@ -1,5 +1,6 @@
 package com.android.NanoClient;
 
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothProfile;
 import android.content.ComponentName;
 import android.content.Context;
@@ -57,21 +58,11 @@ public class MainActivity extends AppCompatActivity {
                 str += ", ";
             }
         }
-        Log.d("==========>NanoAppClient ", str);
+        Log.d("===>NanoAppClient ", str);
     }
 
-    static
-    {
-        System.loadLibrary("nanoApp");
-        System.loadLibrary("nanoApp_jni");
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        /*System.load("/data/data/com.android.NanoClient/lib/libnanoApp.so");
-        System.load("/data/data/com.android.NanoClient/lib/libnanoApp_jni.so");*/
-
-        NanoOpen();
 
         super.onCreate(savedInstanceState);
         //requestPermission();
@@ -192,21 +183,4 @@ public class MainActivity extends AppCompatActivity {
             OS_PRINTF("VoiceKeyEvent " + keycode);
         }
     };//逗号不能少
-
-    //c层回调上来的语音数据方法
-    public void OnDataReceived(byte[] buffer, int size) {
-        //自行执行回调后的操作
-        OS_PRINTF("size: " + size);
-    }
-
-    //c层回调上来的按键事件方法
-    public void OnVoiceKeyAction(int action) {
-        //自行执行回调后的操作
-        OS_PRINTF("action: " + action);
-    }
-
-    //调到C层的方法
-    private native int NanoOpen();
-
-    private native void NanoProcData(byte[] data,int datelen);
 }

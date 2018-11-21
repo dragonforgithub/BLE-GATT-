@@ -6,10 +6,10 @@
     "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\project\\androidStudio\\NanoGattDemo\\service\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target clean"
   ],
   "libraries": {
-    "nanoGatt-Debug-armeabi-v7a": {
-      "artifactName": "nanoGatt",
+    "nanoHAL-Debug-armeabi-v7a": {
+      "artifactName": "nanoHAL",
       "abi": "armeabi-v7a",
-      "output": "E:\\project\\androidStudio\\NanoGattDemo\\service\\src\\main\\jniLibs\\armeabi-v7a\\libnanoGatt.so"
+      "output": "E:\\project\\androidStudio\\NanoGattDemo\\service\\src\\main\\jniLibs\\armeabi-v7a\\libnanoHAL.so"
     },
     "nanogattJNI-Debug-armeabi-v7a": {
       "artifactName": "nanogattJNI",

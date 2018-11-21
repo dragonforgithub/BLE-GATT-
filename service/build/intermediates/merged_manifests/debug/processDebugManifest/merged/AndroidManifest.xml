@@ -21,7 +21,7 @@
 
     <uses-sdk
         android:minSdkVersion="19"
-        android:targetSdkVersion="27" />
+        android:targetSdkVersion="22" />
     <!-- 如需签名成system app,将该属性添加到上面 manifest括号中 -->
     <!-- android:sharedUserId="android.uid.system" -->
 

@@ -12,10 +12,10 @@
       "abi": "armeabi-v7a",
       "output": "E:\\project\\androidStudio\\NanoGattDemo\\service\\src\\main\\jniLibs\\armeabi-v7a\\libnanogattJNI.so"
     },
-    "nanoGatt-Release-armeabi-v7a": {
-      "artifactName": "nanoGatt",
+    "nanoHAL-Release-armeabi-v7a": {
+      "artifactName": "nanoHAL",
       "abi": "armeabi-v7a",
-      "output": "E:\\project\\androidStudio\\NanoGattDemo\\service\\src\\main\\jniLibs\\armeabi-v7a\\libnanoGatt.so"
+      "output": "E:\\project\\androidStudio\\NanoGattDemo\\service\\src\\main\\jniLibs\\armeabi-v7a\\libnanoHAL.so"
     }
   }
 }

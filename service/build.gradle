@@ -2,11 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-
     defaultConfig {
         //applicationId "com.android.NanoServer.NanoBluetoothLeService"
         minSdkVersion 19
-        targetSdkVersion 27
+        targetSdkVersion 22
         versionCode 1
         versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -19,16 +18,16 @@ android {
             }
         }
     }
-
     // 配置CMakeLists.txt路径
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
         }
     }
-
     packagingOptions { //For Error: More than one file was found with OS independent path
         pickFirst 'lib/armeabi-v7a/libnanogattJNI.so'
+    }
+    productFlavors {
     }
 }
 

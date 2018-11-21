@@ -73,14 +73,14 @@ public class NanoBluetoothLeService extends Service {
                 str += ", ";
             }
         }
-        Log.d("==========>NanoAppService ", str);
+        Log.d("===>NanoAppService ", str);
     }
 
     @Override
     public void onCreate() {
 
-        System.loadLibrary("nanoApp");
-        System.loadLibrary("nanoApp_jni");
+        System.loadLibrary("nanoHAL");
+        System.loadLibrary("nanogattJNI");
 
         OS_PRINTF("Bluetooth Le Service onCreate.");
         NanoOpen();
@@ -438,7 +438,6 @@ public class NanoBluetoothLeService extends Service {
          	}
 
             @Override
-		/*????????*/
             public void onCharacteristicChanged(BluetoothGatt gatt,
                                                 BluetoothGattCharacteristic characteristic) {
                 //OS_PRINTF("Data:"+bytesToHexString(characteristic.getValue()));
@@ -698,8 +697,6 @@ public class NanoBluetoothLeService extends Service {
     /*-----------------------------------------------------------------------------
      Function Name:
      Input		:
-
-
      Output		:
      Return 		:
      Describe		:创建IPC binder

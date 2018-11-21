@@ -14,9 +14,9 @@ include_directories(
      ${CMAKE_SOURCE_DIR}/src/main/jni/include
 )
 
-set(lib_src_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI})
-add_library(nanoGatt SHARED IMPORTED)
-set_target_properties(nanoGatt PROPERTIES IMPORTED_LOCATION ${lib_src_DIR}/libnanoGatt.so)
+set(lib_src_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}) #设置第三方动态库路径
+add_library(nanoHAL SHARED IMPORTED)  #创建动态库
+set_target_properties(nanoHAL PROPERTIES IMPORTED_LOCATION ${lib_src_DIR}/libnanoHAL.so) #链接动态库
 
 #find_library( log-lib log )
 
@@ -28,7 +28,7 @@ add_library(nanogattJNI SHARED
 #6.设置需要生成so的第三方链接库
 target_link_libraries(
  nanogattJNI
- nanoGatt
+ nanoHAL
  log
  android
 )
